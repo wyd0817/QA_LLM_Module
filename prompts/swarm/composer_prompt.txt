@@ -1,0 +1,128 @@
+# Query: Move the soil from place A to B.
+{
+  "tasks": [
+    {
+      "task": "Move excavator and dump truck to point A."
+    },
+    {
+      "task": "Begin cycle of digging, loading, transporting, and unloading until all soil is moved from point A to point B."
+    },
+    {
+      "task": "Wait for excavator to reach point A."
+    },
+    {
+      "task": "Start digging with excavator at point A."
+    },
+    {
+      "task": "Wait for excavator to finish digging and for dump truck to reach point A."
+    },
+    {
+      "task": "Load dug soil into dump truck at point A."
+    },
+    {
+      "task": "Wait for soil loading to complete at point A."
+    },
+    {
+      "task": "Transport soil with dump truck from point A to point B."
+    },
+    {
+      "task": "Unload soil at point B."
+    },
+    {
+      "task": "Return dump truck to point A."
+    },
+    {
+      "task": "Repeat the cycle as necessary until completion."
+    },
+    {
+      "task": "After all soil is moved, return both excavator and dump truck to their starting positions."
+    }
+  ]
+}
+# done
+
+# Query: Move gravel from Site C to Site D.
+{
+  "tasks": [
+    {
+      "task": "Move excavator and dump truck to Site C."
+    },
+    {
+      "task": "Begin cycle of digging, loading, transporting, and unloading until all gravel is moved from Site C to Site D."
+    },
+    {
+      "task": "Wait for excavator to reach Site C."
+    },
+    {
+      "task": "Start digging with excavator at Site C."
+    },
+    {
+      "task": "Wait for excavator to finish digging and for dump truck to reach Site C."
+    },
+    {
+      "task": "Load dug gravel into dump truck at Site C."
+    },
+    {
+      "task": "Wait for gravel loading to complete at Site C."
+    },
+    {
+      "task": "Transport gravel with dump truck from Site C to Site D."
+    },
+    {
+      "task": "Unload gravel at Site D."
+    },
+    {
+      "task": "Return dump truck to Site C."
+    },
+    {
+      "task": "Repeat the cycle as necessary until completion."
+    },
+    {
+      "task": "After all gravel is moved, return both excavator and dump truck to their starting positions."
+    }
+  ]
+}
+# done
+
+# Query: Clean up debris at a construction site.
+{
+  "tasks": [
+    {
+      "task": "Move excavator and hauler to the construction site."
+    },
+    {
+      "task": "Begin cycle of cleaning, loading, transporting, and unloading until the site is clean."
+    },
+    {
+      "task": "Wait for excavator and hauler to reach the construction site."
+    },
+    {
+      "task": "Start cleaning debris with the excavator at the construction site."
+    },
+    {
+      "task": "Wait for excavator to finish cleaning and for hauler to arrive."
+    },
+    {
+      "task": "Load cleaned debris into the hauler."
+    },
+    {
+      "task": "Wait for loading to complete."
+    },
+    {
+      "task": "Transport debris to a designated waste facility."
+    },
+    {
+      "task": "Unload debris at the waste facility."
+    },
+    {
+      "task": "Return the hauler to the construction site."
+    },
+    {
+      "task": "Repeat the cycle until the site is clean."
+    },
+    {
+      "task": "After the site is clean, return all equipment to their starting positions."
+    }
+  ]
+}
+# done
