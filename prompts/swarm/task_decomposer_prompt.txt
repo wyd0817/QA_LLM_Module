@@ -1,0 +1,99 @@
+# Query: Move half of the soil from the soil pile to the puddle.
+{
+  "tasks": [
+    {
+      "task": "move_equipment_to_location",
+      "parameters": {
+        "equipment_ids": ["excavator1", "truck1"],
+        "location": "soil_pile"
+      },
+      "start_flag": "",
+      "stop_flag": "end_move_equipment",
+      "dependencies": [],
+      "parallel_flag": false,
+      "condition": "Soil moved is less than 50%"
+    },
+    {
+      "task": "start_digging_at_location",
+      "parameters": {
+        "location": "soil_pile"
+      },
+      "start_flag": "start_digging",
+      "stop_flag": "end_digging",
+      "dependencies": ["end_move_equipment"],
+      "parallel_flag": true,
+      "condition": "Soil moved is less than 50%"
+    },
+    {
+      "task": "load_soil_into_truck",
+      "parameters": {
+        "truck_id": "truck1",
+        "location": "soil_pile"
+      },
+      "start_flag": "start_loading_soil",
+      "stop_flag": "end_loading_soil",
+      "dependencies": ["start_digging"],
+      "parallel_flag": true,
+      "condition": "Soil moved is less than 50%"
+    },
+    {
+      "task": "transport_soil",
+      "parameters": {
+        "truck_id": "truck1",
+        "from_location": "soil_pile",
+        "to_location": "pit"
+      },
+      "start_flag": "start_transporting_soil",
+      "stop_flag": "end_transporting_soil",
+      "dependencies": ["start_loading_soil"],
+      "parallel_flag": true,
+      "condition": "Soil moved is less than 50%"
+    },
+    {
+      "task": "unload_soil_at_location",
+      "parameters": {
+        "truck_id": "truck1",
+        "location": "pit"
+      },
+      "start_flag": "start_unloading_soil",
+      "stop_flag": "end_unloading_soil",
+      "dependencies": ["end_transporting_soil"],
+      "parallel_flag": false,
+      "condition": "Soil moved is less than 50%"
+    },
+    {
+      "task": "return_truck_to_location",
+      "parameters": {
+        "truck_id": "truck1",
+        "location": "soil_pile"
+      },
+      "start_flag": "start_return_truck",
+      "stop_flag": "end_return_truck",
+      "dependencies": ["end_unloading_soil"],
+      "parallel_flag": true,
+      "condition": "Soil moved is less than 50%"
+    },
+    {
+      "task": "check_if_half_soil_moved",
+      "parameters": {
+        "condition": "Soil moved is less than 50%"
+      },
+      "start_flag": "start_check_half_moved",
+      "stop_flag": "end_check_half_moved",
+      "dependencies": ["end_return_truck"],
+      "parallel_flag": false
+    },
+    {
+      "task": "return_equipment_to_starting_positions",
+      "parameters": {
+        "equipment_ids": ["excavator1", "truck1"]
+      },
+      "start_flag": "start_return_equipment",
+      "stop_flag": "end_return_equipment",
+      "dependencies": ["end_check_half_moved"],
+      "parallel_flag": false,
+      "condition": "Half soil moved"
+    }
+  ]
+}
+# done

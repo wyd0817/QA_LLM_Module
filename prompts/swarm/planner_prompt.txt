@@ -1,0 +1,109 @@
+# Query: Ensure all robots avoid the puddle.
+{
+    "instruction_function": {
+        "name": "avoid_areas_for_all_robots"
+    },
+    "clip_keywords": ["The puddle"]
+}
+# done
+
+# Query: Robots 2 and 3 avoid the puddle.
+{
+    "instruction_function": {
+        "name": "avoid_areas_for_specific_robots",
+        "robot_ids": [2, 3]
+    },
+    "clip_keywords": ["The puddle"]
+}
+# done
+
+# Query: All robots go to the puddle area.
+{
+    "instruction_function": {
+        "name": "target_area_for_all_robots"
+    },
+    "clip_keywords": ["The puddle"]
+}
+# done
+
+# Query: Robots 1 and 4 go to the puddle area.
+{
+    "instruction_function": {
+        "name": "target_area_for_specific_robots",
+        "robot_ids": [1, 4]
+    },
+    "clip_keywords": ["The puddle"]
+}
+# done
+
+# Query: All robots resume operations at the puddle.
+{
+    "instruction_function": {
+        "name": "allow_areas_for_all_robots"
+    },
+    "clip_keywords": ["The puddle"]
+}
+# done
+
+# Query: Robots 5 and 6 operate in the puddle area.
+{
+    "instruction_function": {
+        "name": "allow_areas_for_specific_robots",
+        "robot_ids": [5, 6]
+    },
+    "clip_keywords": ["The puddle"]
+}
+# done
+
+# Query: All robots return to start.
+{
+    "instruction_function": {
+        "name": "return_to_start_for_all_robots"
+    }
+}
+# done
+
+# Query: Robots 3 and 4 return to charging stations.
+{
+    "instruction_function": {
+        "name": "return_to_start_for_specific_robots",
+        "robot_ids": [3, 4]
+    }
+}
+# done
+
+# Query: Excavator performs excavation.
+{
+    "instruction_function": {
+        "name": "Excavation",
+        "robot_type": "excavator"
+    }
+}
+# done
+
+# Query: Excavator performs unloading.
+{
+    "instruction_function": {
+        "name": "ExcavatorUnloading",
+        "robot_type": "excavator"
+    }
+}
+# done
+
+# Query: Dump truck performs loading.
+{
+    "instruction_function": {
+        "name": "DumpLoading",
+        "robot_type": "dump"
+    }
+}
+# done
+
+# Query: Dump truck performs unloading.
+{
+    "instruction_function": {
+        "name": "DumpUnloading",
+        "robot_type": "dump"
+    }
+}
+# done

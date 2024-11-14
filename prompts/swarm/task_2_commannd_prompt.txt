@@ -1,0 +1,564 @@
+# Query: Ensure all robots avoid the puddle.
+{
+  "tasks": [
+    {
+      "task": "ensure_all_robots_avoid_puddle",
+      "instruction_function": {
+        "name": "avoid_areas_for_all_robots",
+        "robot_type": ["dump_truck", "excavator"],
+        "robot_count": "all",
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: Trucks 2 and 3 avoid the puddle.
+{
+  "tasks": [
+    {
+      "task": "trucks_2_and_3_avoid_puddle",
+      "instruction_function": {
+        "name": "avoid_areas_for_specific_robots",
+        "robot_ids": ["robot_dump_truck_02", "robot_dump_truck_03"],
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavators 1 and 2 avoid the puddle.
+{
+  "tasks": [
+    {
+      "task": "excavators_1_and_2_avoid_puddle",
+      "instruction_function": {
+        "name": "avoid_areas_for_specific_robots",
+        "robot_ids": ["robot_excavator_01", "robot_excavator_02"],
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: All robots go to the puddle area.
+{
+  "tasks": [
+    {
+      "task": "all_robots_go_to_puddle_area",
+      "instruction_function": {
+        "name": "target_area_for_all_robots",
+        "robot_type": ["dump_truck", "excavator"],
+        "robot_count": "all",
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavators 1 and 2 go to the puddle area.
+{
+  "tasks": [
+    {
+      "task": "excavators_1_and_2_go_to_puddle_area",
+      "instruction_function": {
+        "name": "target_area_for_specific_robots",
+        "robot_ids": ["robot_excavator_01", "robot_excavator_02"],
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: Truck 1 and 4 go to the puddle area.
+{
+  "tasks": [
+    {
+      "task": "truck_1_and_4_go_to_puddle_area",
+      "instruction_function": {
+        "name": "target_area_for_specific_robots",
+        "robot_ids": ["robot_dump_truck_01", "robot_dump_truck_04"],
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: Truck 1 and 4 go to the obstacle area.
+{
+  "tasks": [
+    {
+      "task": "truck_1_and_4_go_to_obstacle_area",
+      "instruction_function": {
+        "name": "target_area_for_specific_robots",
+        "robot_ids": ["robot_dump_truck_01", "robot_dump_truck_04"],
+        "dependencies": [],
+        "object_keywords": ["obstacle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavators 1 and 2 go to the puddle area.
+{
+  "tasks": [
+    {
+      "task": "excavators_1_and_2_go_to_puddle_area",
+      "instruction_function": {
+        "name": "target_area_for_specific_robots",
+        "robot_ids": ["robot_excavator_01", "robot_excavator_02"],
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: All robots resume operations at the puddle.
+{
+  "tasks": [
+    {
+      "task": "all_robots_resume_operations_at_puddle",
+      "instruction_function": {
+        "name": "allow_areas_for_all_robots",
+        "robot_type": ["dump_truck", "excavator"],
+        "robot_count": "all",
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: Trucks 5 and 6 operate in the puddle area.
+{
+  "tasks": [
+    {
+      "task": "trucks_5_and_6_operate_in_puddle_area",
+      "instruction_function": {
+        "name": "allow_areas_for_specific_robots",
+        "robot_ids": ["robot_dump_truck_05", "robot_dump_truck_06"],
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavators 1 and 2 operate in the puddle area.
+{
+  "tasks": [
+    {
+      "task": "excavators_1_and_2_operate_in_puddle_area",
+      "instruction_function": {
+        "name": "allow_areas_for_specific_robots",
+        "robot_ids": ["robot_excavator_01", "robot_excavator_02"],
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: All robots return to start.
+{
+  "tasks": [
+    {
+      "task": "all_robots_return_to_start",
+      "instruction_function": {
+        "name": "return_to_start_for_all_robots",
+        "robot_type": ["dump_truck", "excavator"],
+        "robot_count": "all",
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Trucks 3 and 4 return to charging stations.
+{
+  "tasks": [
+    {
+      "task": "trucks_3_and_4_return_to_charging_stations",
+      "instruction_function": {
+        "name": "return_to_start_for_specific_robots",
+        "robot_ids": ["robot_dump_truck_03", "robot_dump_truck_04"],
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavators 3 and 4 return to charging stations.
+{
+  "tasks": [
+    {
+      "task": "excavators_1_and_2_return_to_charging_stations",
+      "instruction_function": {
+        "name": "return_to_start_for_specific_robots",
+        "robot_ids": ["robot_excavator_01", "robot_excavator_02"],
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: All excavator perform excavation.
+{
+  "tasks": [
+    {
+      "task": "all_excavator_perform_excavation",
+      "instruction_function": {
+        "name": "Excavation",
+        "robot_type": ["excavator"],
+        "robot_count": "all",
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavator 1 performs excavation.
+{
+  "tasks": [
+    {
+      "task": "excavator_1_performs_excavation",
+      "instruction_function": {
+        "name": "Excavation",
+        "robot_ids": ["robot_excavator_01"],
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavator 2 performs excavation.
+{
+  "tasks": [
+    {
+      "task": "excavator_2_performs_excavation",
+      "instruction_function": {
+        "name": "Excavation",
+        "robot_ids": ["robot_excavator_02"],
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: All excavator perform unloading.
+{
+  "tasks": [
+    {
+      "task": "all_excavator_perform_unloading",
+      "instruction_function": {
+        "name": "ExcavatorUnloading",
+        "robot_type": ["excavator"],
+        "robot_count": "all",
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavator 1 performs unloading.
+{
+  "tasks": [
+    {
+      "task": "excavator_1_performs_unloading",
+      "instruction_function": {
+        "name": "ExcavatorUnloading",
+        "robot_ids": ["robot_excavator_01"],
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavator 2 performs unloading.
+{
+  "tasks": [
+    {
+      "task": "excavator_2_performs_unloading",
+      "instruction_function": {
+        "name": "ExcavatorUnloading",
+        "robot_ids": ["robot_excavator_02"],
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: All dump truck perform loading.
+{
+  "tasks": [
+    {
+      "task": "all_dump_truck_perform_loading",
+      "instruction_function": {
+        "name": "DumpLoading",
+        "robot_type": ["dump_truck"],
+        "robot_count": "all",
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Dump truck 3 performs loading.
+{
+  "tasks": [
+    {
+      "task": "dump_truck_3_performs_loading",
+      "instruction_function": {
+        "name": "DumpLoading",
+        "robot_ids": ["robot_dump_truck_03"],
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Dump truck 1 performs loading.
+{
+  "tasks": [
+    {
+      "task": "dump_truck_1_performs_loading",
+      "instruction_function": {
+        "name": "DumpLoading",
+        "robot_ids": ["robot_dump_truck_01"],
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+
+
+# Query: All dump truck perform unloading.
+{
+  "tasks": [
+    {
+      "task": "all_dump_truck_perform_unloading",
+      "instruction_function": {
+        "name": "DumpUnloading",
+        "robot_type": ["dump_truck"],
+        "robot_count": "all",
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Dump truck 5 performs unloading.
+{
+  "tasks": [
+    {
+      "task": "dump_truck_5_performs_unloading",
+      "instruction_function": {
+        "name": "DumpUnloading",
+        "robot_ids": ["robot_dump_truck_05"],
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Dump truck 2 performs unloading.
+{
+  "tasks": [
+    {
+      "task": "dump_truck_2_performs_unloading",
+      "instruction_function": {
+        "name": "DumpUnloading",
+        "robot_ids": ["robot_dump_truck_02"],
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Truck1 go to puddle.
+{
+  "tasks": [
+    {
+      "task": "move_equipment_to_location",
+      "instruction_function": {
+        "name": "target_area_for_specific_robots",
+        "robot_ids": ["robot_dump_truck_01"],
+        "dependencies": [],
+        "start_flag": "",
+        "stop_flag": "end_move_equipment",
+        "parallel_flag": false,
+        "condition": "",
+      },
+      "object_keywords": ["puddle1"]
+    }
+  ]
+}
+# done
+
+# Query: After excavator 1 finishes excavation, excavator 2 performs excavation.
+{
+  "tasks": [
+    {
+      "task": "excavator_1_excavation",
+      "instruction_function": {
+        "name": "Excavation",
+        "robot_ids": ["robot_excavator_01"],
+        "dependencies": [],
+        "start_flag": "",
+        "stop_flag": "end_excavator_1",
+        "parallel_flag": false,
+        "condition": "",
+        "object_keywords": []
+      }
+    },
+    {
+      "task": "excavator_2_excavation",
+      "instruction_function": {
+        "name": "Excavation",
+        "robot_ids": ["robot_excavator_02"],
+        "dependencies": ["excavator_1_excavation"],
+        "start_flag": "excavator_1_excavation",
+        "stop_flag": "end_excavator_2",
+        "parallel_flag": false,
+        "condition": "",
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Truck 2 goes to the puddle, then Truck 3 goes to the puddle.
+{
+  "tasks": [
+    {
+      "task": "move_truck2_to_location",
+      "instruction_function": {
+        "name": "target_area_for_specific_robots",
+        "robot_ids": ["robot_dump_truck_02"],
+        "dependencies": [],
+        "start_flag": "",
+        "stop_flag": "",
+        "parallel_flag": false,
+        "condition": "",
+        "object_keywords": []
+      },
+      "object_keywords": ["puddle1"]
+    },
+    {
+      "task": "move_truck3_to_location",
+      "instruction_function": {
+        "name": "return_to_start_for_specific_robots",
+        "robot_ids": ["robot_dump_truck_03"],
+        "dependencies": ["move_truck2_to_location"],
+        "start_flag": "move_truck2_to_location",
+        "stop_flag": "",
+        "parallel_flag": false,
+        "condition": "",
+        "object_keywords": []
+      },
+      "object_keywords": ["puddle1"]
+    }
+  ]
+}
+# done
+
+# Query: Two trucks go to the puddle, then load, and then return to their initial position.
+{
+  "tasks": [
+    {
+      "task": "move_two_trucks_to_location",
+      "instruction_function": {
+        "name": "target_area_for_specific_robots",
+        "robot_type": ["dump_truck"],
+        "robot_count": 2,
+        "dependencies": [],
+        "start_flag": "",
+        "stop_flag": "end_move_equipment",
+        "parallel_flag": false,
+        "condition": "",
+        "object_keywords": []
+      },
+      "object_keywords": ["puddle1"]
+    },
+    {
+      "task": "two_trucks_perform_loading_soil",
+      "instruction_function": {
+        "name": "DumpLoading",
+        "robot_type": ["dump_truck"],
+        "robot_count": 2,
+        "dependencies": ["move_two_trucks_to_location"],
+        "start_flag": "start_loading_soil",
+        "stop_flag": "end_loading_soil",
+        "parallel_flag": true,
+        "condition": "",
+        "object_keywords": []
+      }
+    },
+    {
+      "task": "return_truck_to_starting_position",
+      "instruction_function": {
+        "name": "return_to_start_for_specific_robots",
+        "robot_type": ["dump_truck"],
+        "robot_count": 2,
+        "dependencies": ["two_trucks_perform_loading_soil"],
+        "start_flag": "start_return_truck",
+        "stop_flag": "end_return_truck",
+        "parallel_flag": true,
+        "condition": "",
+        "object_keywords": []
+      },
+      "object_keywords": ["puddle1"]
+    }
+  ]
+}
+# done

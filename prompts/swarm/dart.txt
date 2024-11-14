@@ -1,0 +1,169 @@
+# Query: Ensure all robots avoid the puddle.
+{
+  "tasks": [
+    {
+      "task": "avoid_areas_for_all_robots_1",
+      "instruction_function": {
+        "name": "avoid_areas_for_all_robots",
+        "robot_type": ["dump_truck", "excavator"],
+        "robot_count": "all",
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavators 1 and 2 avoid the puddle.
+{
+  "tasks": [
+    {
+      "task": "avoid_areas_for_specific_robots_1",
+      "instruction_function": {
+        "name": "avoid_areas_for_specific_robots",
+        "robot_ids": ["robot_excavator_01", "robot_excavator_02"],
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavators 1 and 2 go to the puddle area.
+{
+  "tasks": [
+    {
+      "task": "target_area_for_specific_robots_1",
+      "instruction_function": {
+        "name": "target_area_for_specific_robots",
+        "robot_ids": ["robot_excavator_01", "robot_excavator_02"],
+        "dependencies": [],
+        "object_keywords": ["puddle1"]
+      }
+    }
+  ]
+}
+# done
+
+# Query: All robots return to start.
+{
+  "tasks": [
+    {
+      "task": "return_to_start_for_all_robots_1",
+      "instruction_function": {
+        "name": "return_to_start_for_all_robots",
+        "robot_type": ["dump_truck", "excavator"],
+        "robot_count": "all",
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Excavator 1 performs excavation.
+{
+  "tasks": [
+    {
+      "task": "Excavation_1",
+      "instruction_function": {
+        "name": "Excavation",
+        "robot_ids": ["robot_excavator_01"],
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: All dump truck perform loading.
+{
+  "tasks": [
+    {
+      "task": "DumpLoading_1",
+      "instruction_function": {
+        "name": "DumpLoading",
+        "robot_type": ["dump_truck"],
+        "robot_count": "all",
+        "dependencies": [],
+        "object_keywords": []
+      }
+    }
+  ]
+}
+# done
+
+# Query: Truck 1 go to obstacle.
+{
+  "tasks": [
+    {
+      "task": "target_area_for_specific_robots_1",
+      "instruction_function": {
+        "name": "target_area_for_specific_robots",
+        "robot_ids": ["robot_dump_truck_01"],
+        "dependencies": [],
+        "start_flag": "",
+        "stop_flag": "end_move_equipment",
+        "parallel_flag": false,
+        "condition": "",
+      },
+      "object_keywords": ["obstacle1"]
+    }
+  ]
+}
+# done
+
+# Query: Two trucks go to the puddle, then load, and then return to their initial position.
+{
+  "tasks": [
+    {
+      "task": "target_area_for_specific_robots_1",
+      "instruction_function": {
+        "name": "target_area_for_specific_robots",
+        "robot_type": ["dump_truck"],
+        "robot_count": 2,
+        "dependencies": [],
+        "start_flag": "",
+        "stop_flag": "end_move_equipment",
+        "parallel_flag": false,
+        "condition": "",
+        "object_keywords": []
+      },
+      "object_keywords": ["puddle1"]
+    },
+    {
+      "task": "DumpLoading_1",
+      "instruction_function": {
+        "name": "DumpLoading",
+        "robot_type": ["dump_truck"],
+        "robot_count": 2,
+        "dependencies": ["target_area_for_specific_robots_1"],
+        "start_flag": "start_loading_soil",
+        "stop_flag": "end_loading_soil",
+        "parallel_flag": true,
+        "condition": "",
+        "object_keywords": []
+      }
+    },
+    {
+      "task": "return_to_start_for_specific_robots_1",
+      "instruction_function": {
+        "name": "return_to_start_for_specific_robots",
+        "robot_type": ["dump_truck"],
+        "robot_count": 2,
+        "dependencies": ["DumpLoading_1"],
+        "start_flag": "start_return_truck",
+        "stop_flag": "end_return_truck",
+        "parallel_flag": true,
+        "condition": "",
+        "object_keywords": []
+      },
+      "object_keywords": ["puddle1"]
+    }
+  ]
+}
+# done
